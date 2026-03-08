@@ -100,7 +100,7 @@ The information is processed and converted into vector embeddings to enable sema
 
 ## <h2>📁 Project Structure</h2>
 <pre>
-├── assurance_complet.txt            # Main insurance document
+├── assurance_complet.txt            # data_complet
 ├── data/                            # Processed insurance sections
 ├── chunks/                          # Text chunks used for RAG
 ├── chatbot_rag.py                   # Main chatbot script
