@@ -98,9 +98,14 @@ Assistance services
 
 The information is processed and converted into vector embeddings to enable semantic search.
 
-<h2>📁 Project Structure</h2>
-<pre> ├── assurance_complet.txt # Main insurance document ├── data/ # Processed insurance sections ├── chunks/ # Text chunks used for RAG ├── chatbot_rag.py # Main chatbot script ├── README.md # Project documentation </pre>
-<h2>💬 Example Interaction</h2>
+## <h2>📁 Project Structure</h2>
+<pre>
+├── assurance_complet.txt            # Main insurance document
+├── data/                            # Processed insurance sections
+├── chunks/                          # Text chunks used for RAG
+├── chatbot_rag.py                   # Main chatbot script
+├── README.md                        # Project documentation
+</pre>
 
 User:
 
