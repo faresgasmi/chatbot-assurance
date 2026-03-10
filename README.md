@@ -1,132 +1,194 @@
-<h1>MAGHREBIA Insurance – AI Chatbot (RAG Project)</h1>
+<h1>MAGHREBIA Insurance AI Chatbot (RAG Project)</h1>
 
-<h2>📝 Overview</h2>
+<h2>Overview</h2>
 
-This project builds an AI chatbot designed to help users understand MAGHREBIA home insurance services.
+<p>
+This project is an AI chatbot that helps users understand home insurance services offered by MAGHREBIA Assurances, a Tunisian insurance company.
+</p>
 
-MAGHREBIA is a Tunisian insurance company that offers different types of insurance such as:
+<p>MAGHREBIA provides several types of insurance:</p>
 
-Auto insurance  
-Health insurance  
-Home insurance  
+<ul>
+<li>Auto insurance</li>
+<li>Health insurance</li>
+<li>Home insurance</li>
+</ul>
 
-This chatbot focuses mainly on home insurance. It helps users ask questions and receive clear explanations about guarantees, options, and services.
+<p>
+This chatbot focuses on home insurance. Users can ask questions and receive clear and simple explanations about insurance guarantees, options, and services.
+</p>
 
-The project combines Artificial Intelligence (AI) and Retrieval-Augmented Generation (RAG) to generate answers based on real insurance documents.
+<p>
+The system uses Artificial Intelligence and <b>RAG (Retrieval-Augmented Generation)</b> to answer questions based on real insurance documents.
+</p>
 
-<h2>🚀 Key Features</h2>
+<h2>Project Features</h2>
 
 <h3>Document Processing</h3>
 
-The original insurance document is processed before being used by the AI.
+<p>Before using the documents, the system processes the insurance text.</p>
 
-Steps:
+<p>Steps:</p>
 
-Splitting the main document into structured sections  
-Cleaning and preparing the text  
-Dividing the text into smaller chunks  
+<ul>
+<li>Split the main document into sections</li>
+<li>Clean the text</li>
+<li>Divide the text into smaller pieces called chunks</li>
+</ul>
 
-This makes the information easier for the AI to search and understand.
+<p>
+This makes the information easier to search and understand.
+</p>
 
 <h3>RAG (Retrieval-Augmented Generation)</h3>
 
-The chatbot uses a RAG system to answer questions.
+<p>The chatbot uses a RAG architecture.</p>
 
-How it works:
+<p>How it works:</p>
 
-The user asks a question  
-The system searches the most relevant text chunks  
-These chunks are sent to the AI model  
-The AI generates a clear answer using this context  
+<ul>
+<li>The user asks a question</li>
+<li>The system searches relevant text chunks</li>
+<li>The chunks are sent to the AI model</li>
+<li>The model generates an answer using this context</li>
+</ul>
 
-This helps the chatbot give more accurate and reliable responses.
+<p>This method improves accuracy and reliability.</p>
 
-<h3>Vector Search with FAISS</h3>
+<h3>Vector Search</h3>
 
-The project uses FAISS to perform fast similarity search between questions and documents.
+<p>The project uses <b>FAISS</b> for fast similarity search.</p>
 
-FAISS allows the system to:
+<p>FAISS allows the system to:</p>
 
-Store document embeddings  
-Find the most relevant information quickly  
-Improve the quality of chatbot answers  
+<ul>
+<li>Store document embeddings</li>
+<li>Find relevant information quickly</li>
+<li>Improve answer quality</li>
+</ul>
 
-<h3>Local AI Model with Ollama</h3>
+<h3>Local AI Model</h3>
 
-The chatbot uses Ollama to run a local language model such as:
+<p>The chatbot runs a local language model using <b>Ollama</b>.</p>
 
-Llama 3  
-Llama 3.1  
+<p>Model used in this project:</p>
 
-Running models locally provides:
+<ul>
+<li>Llama 3.1 (8B)</li>
+</ul>
 
-Faster responses  
-Better privacy  
-No external API required  
+<p>Running the model locally provides:</p>
 
-<h2>🛠 Technologies Used</h2>
+<ul>
+<li>Faster responses</li>
+<li>Better data privacy</li>
+<li>No external API needed</li>
+</ul>
 
-<b>Python</b> – main programming language  
+<h2>Technologies Used</h2>
 
-<b>Sentence Transformers</b> – text embeddings  
+<ul>
+<li>Python</li>
+<li>Sentence Transformers</li>
+<li>FAISS</li>
+<li>Ollama</li>
+<li>RAG Architecture</li>
+</ul>
 
-<b>FAISS</b> – vector similarity search  
+<h2>Data Source</h2>
 
-<b>Ollama</b> – local AI model execution  
+<p>The chatbot uses documentation related to MAGHREBIA home insurance, including:</p>
 
-<b>RAG Architecture</b> – context-based AI responses  
+<ul>
+<li>Insurance guarantees</li>
+<li>Optional services</li>
+<li>Insurance packs</li>
+<li>Assistance services</li>
+</ul>
 
-<h2>📊 Data Source</h2>
+<p>
+The documents are converted into vector embeddings to allow semantic search.
+</p>
 
-The chatbot uses internal documentation about MAGHREBIA home insurance, including:
-
-Insurance guarantees  
-Optional services  
-Insurance packs  
-Assistance services  
-
-The information is processed and converted into vector embeddings to enable semantic search.
-
-<h2>📁 Project Structure</h2>
+<h2>Project Structure</h2>
 
 <pre>
-├── assurance_complet.txt            # main insurance document
-├── data/                            # processed insurance sections
-├── chunks/                          # text chunks used for RAG
-├── chatbot_rag.py                   # main chatbot script
-├── README.md                        # project documentation
+project/
+│
+├── assurance_complet.txt
+│
+├── data/
+│   ├── assurance_garanties.txt
+│   ├── assurance_options.txt
+│   ├── assurance_packs.txt
+│   └── assurance_services.txt
+│
+├── chunks/
+│   ├── chunk files used for retrieval
+│
+├── chatbot_rag.py
+│
+└── README.md
 </pre>
 
-<h2>💬 Example</h2>
+<h2>Example</h2>
 
-<b>User:</b>  
-What does the home insurance cover?
+<p><b>User question:</b></p>
 
-<b>Chatbot:</b>  
+<p>What does the home insurance cover?</p>
 
-MAGHREBIA home insurance protects your home against several risks such as:
+<p><b>Chatbot answer:</b></p>
 
-- Theft  
-- Water damage  
-- Fire and electrical damage  
-- Natural events like storms  
+<ul>
+<li>Theft</li>
+<li>Water damage</li>
+<li>Fire and electrical damage</li>
+<li>Natural events like storms</li>
+</ul>
 
-<h2>📌 Why This Project?</h2>
+<h2>Installation</h2>
 
-This project demonstrates how AI can be used to improve customer assistance in the insurance sector.
+<p>Install required Python libraries:</p>
 
-It shows the ability to:
+<pre>
+pip install faiss-cpu sentence-transformers numpy ollama
+</pre>
 
-Build a RAG chatbot  
-Process real business documents  
-Use vector search and embeddings  
-Deploy a local AI assistant  
+<p>Install the model using Ollama:</p>
 
-<h2>🌐 Connect With Me</h2>
+<pre>
+ollama pull llama3.1:8b
+</pre>
 
-📧 Email: faresguesmi815@gmail.com  
+<p>Run the chatbot:</p>
 
-💼 LinkedIn:  
-<a href="https://www.linkedin.com/in/fares-guesmi-6aa849262/">Fares Guesmi</a>
+<pre>
+python chatbot_rag.py
+</pre>
 
-⭐ If you like this project, feel free to give it a star on GitHub!
+<h2>Why This Project</h2>
+
+<p>
+This project demonstrates how AI can improve customer assistance in the insurance sector.
+</p>
+
+<p>It shows how to:</p>
+
+<ul>
+<li>Build a RAG chatbot</li>
+<li>Process real business documents</li>
+<li>Use vector search and embeddings</li>
+<li>Run a local AI assistant</li>
+</ul>
+
+<h2>Author</h2>
+
+<p><b>Fares Guesmi</b></p>
+
+<p><b>Email</b><br>
+faresguesmi815@gmail.com
+</p>
+
+<p><b>LinkedIn</b><br>
+<a href="https://www.linkedin.com/in/fares-guesmi-6aa849262/">https://www.linkedin.com/in/fares-guesmi-6aa849262/</a>
+</p>
